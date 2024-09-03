@@ -13,8 +13,6 @@ class Task(models.Model):
     time_create = models.DateTimeField(auto_now_add=True)
     time_update = models.DateTimeField(auto_now=True)
 
-    #tasks_collections = models.ManyToManyField('TaskCollection', blank=True, related_name='tasks')
-
     def __str__(self):
         return f'{self.id} {self.content[:10]}'
 
